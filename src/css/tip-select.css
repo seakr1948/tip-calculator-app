@@ -1,0 +1,57 @@
+.tip-select{
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.tip-select button{
+    width: 45%;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    color: white;
+    background-color: var(--Very-dark-cyan);
+    font-weight: bold;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.tip-select button:hover:not(:last-child){
+    background-color: var(--selected);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+
+.tip-select > *:not(:last-child){
+    font-size: 24px;
+    
+}
+
+#selected{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.tip-select > *:last-child{
+    padding: 0;
+    background-color: transparent;
+}
+
+.tip-select > *:last-child:focus-within{
+    outline: 3px solid var(--Strong-cyan);
+}
+
+#custom-tip{
+    text-align: right;
+    border-radius: 5px;
+    
+}
+
+#custom-tip::placeholder{
+    color: var(--Dark-cyan-1);
+}
+
+.tip-select input{
+    width: 100%;
+}

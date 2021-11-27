@@ -1,38 +1,54 @@
+input, label{
+  display: block;
+}
+
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.tip-container{
+  
+  height: 100%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tip-container img{
+  margin: 2em 0;
+  width: 30%;
+}
+
+.tip-container p, label{
+  font-weight: bold;
+  color: var(--Dark-cyan-1);
+}
+
+
+/* --- Body of the App -------- */
+
+
+/* Tip Body */
+.tip-body{
+  height: 100%;
+  background-color: var(--White);
+  border-radius: 1em 1em 0em 0em;
+  padding: 2em;
+}
+
+.tip-body > *{
+  
+  margin: 1.5em 0;
+}
+
+/* Bill entry */
+.bill-entry{
+  
+  width: 100%;
 }
