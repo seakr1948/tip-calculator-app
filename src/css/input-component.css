@@ -33,3 +33,20 @@
     
 }
 
+.input-header{
+    justify-content: space-between;
+}
+
+#error-boundary{
+    outline: 3px solid hsl(34, 100%, 50%);
+}
+
+#error-text-hidden{
+    color: hsl(34, 100%, 50%);
+    visibility: hidden;
+}
+
+#error-text-visible{
+    color: hsl(34, 100%, 50%);
+    visibility: visible;
+}

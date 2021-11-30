@@ -46,3 +46,7 @@
 .tip-amount-container button:hover{
     background-color: var(--selected);
 }
+
+#reset{
+    background-color: hsl(183, 100%, 30%);
+}

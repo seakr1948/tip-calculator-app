@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/tip-amount.css'
 
 
-const TipAmount = ({Amount, Total, setBill, setNumber, setTipAmount, setTotal, setSelected}) => {
+const TipAmount = ({Amount, Total, Bill, Number, setBill, setNumber, setTipAmount, setTotal, setSelected}) => {
     return (
         <div className="tip-amount-container flex">
             <div className="tip-results flex">
@@ -14,6 +14,10 @@ const TipAmount = ({Amount, Total, setBill, setNumber, setTipAmount, setTotal, s
                 <p className="output">${Total.toFixed(2)}</p>
             </div>
             <button 
+            id={
+                (Bill === "" & Number === "") ? 'reset' : ''
+            }
+
             onClick={() => {
                 setBill("")
                 setNumber("")

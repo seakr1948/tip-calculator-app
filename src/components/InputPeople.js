@@ -1,10 +1,26 @@
 import React from 'react'
-
+import "../css/input-component.css"
 const InputPeople = ({Label, icon, setNumber, Number}) => {
     return (
         <div className="input-container">
-            <label htmlFor={Label}>{Label}</label>
-            <div className="flex input-box">
+            <div className="input-header flex">
+                <label htmlFor={Label}>{Label}</label> 
+                <p id={
+                    Number === "0" ? "error-text-visible"
+                    : "error-text-hidden"
+                }
+                >
+                    Can't be zero
+                </p>
+            </div>
+            
+            <div 
+                className="flex input-box" 
+                id={ 
+                    Number === "0" ? "error-boundary"
+                    : ""
+                }
+                >
                 <img src={icon} alt={Label} />
                 <input 
                     className="input" 

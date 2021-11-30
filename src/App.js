@@ -8,7 +8,7 @@ import Logo from './images/logo.svg'
 import Dollar from './images/icon-dollar.svg'
 import Person from './images/icon-person.svg'
 
-import InputComponent from './components/InputComponent';
+import InputBill from './components/InputBill';
 import TipSelect from './components/TipSelect';
 import TipAmount from './components/TipAmount';
 import InputPeople from './components/InputPeople';
@@ -41,13 +41,13 @@ function App() {
         <img src={Logo} alt="Logo" />
         
         <div className="tip-body">
-          <InputComponent Label="Bill" icon={Dollar} Bill={bill} setBill={setBill}/>
+          <InputBill Label="Bill" icon={Dollar} Bill={bill} setBill={setBill}/>
           
           <TipSelect Bill={bill} calculate={calculate}  Number={number} selected={selected} setSelected={setSelected}/>
 
           <InputPeople Label="Number of People" icon={Person} setNumber={setNumber} Number={number}/>
 
-          <TipAmount Amount={tipAmount} Total={total} setBill={setBill} setNumber={setNumber} setTipAmount={setTipAmount} setTotal={setTotal} setSelected={setSelected}/>
+          <TipAmount Amount={tipAmount} Total={total} Bill={bill} Number={number} setBill={setBill} setNumber={setNumber} setTipAmount={setTipAmount} setTotal={setTotal} setSelected={setSelected}/>
         </div>
         
       </div>
