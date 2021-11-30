@@ -8,6 +8,10 @@
     margin-top: 0.5em;
 }
 
+.input-box input::placeholder{
+    color: var(--Dark-cyan-2);
+}
+
 .input{
     width: 100%;
 }

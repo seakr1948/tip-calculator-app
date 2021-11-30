@@ -11,11 +11,29 @@ import Person from './images/icon-person.svg'
 import InputComponent from './components/InputComponent';
 import TipSelect from './components/TipSelect';
 import TipAmount from './components/TipAmount';
+import InputPeople from './components/InputPeople';
 
 function App() {
 
   const [bill, setBill] = useState(0);
-  const [customTip, setCustomTip] = useState(0);
+  
+  const [number, setNumber] = useState(0);
+  const [tipAmount, setTipAmount] = useState(0.00);
+  const [total, setTotal] = useState(0.00);
+
+  const calculate = (bill, tip_percent, number) => {
+    bill = parseFloat(bill)
+    number = parseFloat(number)
+    
+    let tip = bill * tip_percent;
+    let total = bill + tip;
+
+    console.log(tip/number)
+    
+    setTipAmount((tip / number))
+    setTotal((total / number))
+  }
+
   return (
     <div className="App flex">
       <div className="tip-container flex">
@@ -23,13 +41,13 @@ function App() {
         <img src={Logo} alt="Logo" />
         
         <div className="tip-body">
-          <InputComponent Label="Bill" icon={Dollar}/>
+          <InputComponent Label="Bill" icon={Dollar} Bill={bill} setBill={setBill}/>
           
-          <TipSelect />
+          <TipSelect Bill={bill} calculate={calculate}  Number={number}/>
 
-          <InputComponent Label="Number of People" icon={Person}/>
+          <InputPeople Label="Number of People" icon={Person} setNumber={setNumber} Number={number}/>
 
-          <TipAmount />
+          <TipAmount Amount={tipAmount} Total={total}/>
         </div>
         
       </div>

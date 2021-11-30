@@ -33,6 +33,11 @@
     color: var(--Very-dark-cyan);
 }
 
+#selected:hover{
+    background-color: var(--selected);
+    color: var(--Very-dark-cyan);
+}
+
 .tip-select > *:last-child{
     padding: 0;
     background-color: transparent;
