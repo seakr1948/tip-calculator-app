@@ -15,11 +15,11 @@ import InputPeople from './components/InputPeople';
 
 function App() {
 
-  const [bill, setBill] = useState(0);
-  
-  const [number, setNumber] = useState(0);
-  const [tipAmount, setTipAmount] = useState(0.00);
-  const [total, setTotal] = useState(0.00);
+  const [bill, setBill] = useState("");
+  const [selected, setSelected] = useState(null)
+  const [number, setNumber] = useState("");
+  const [tipAmount, setTipAmount] = useState(0);
+  const [total, setTotal] = useState(0);
 
   const calculate = (bill, tip_percent, number) => {
     bill = parseFloat(bill)
@@ -43,11 +43,11 @@ function App() {
         <div className="tip-body">
           <InputComponent Label="Bill" icon={Dollar} Bill={bill} setBill={setBill}/>
           
-          <TipSelect Bill={bill} calculate={calculate}  Number={number}/>
+          <TipSelect Bill={bill} calculate={calculate}  Number={number} selected={selected} setSelected={setSelected}/>
 
           <InputPeople Label="Number of People" icon={Person} setNumber={setNumber} Number={number}/>
 
-          <TipAmount Amount={tipAmount} Total={total}/>
+          <TipAmount Amount={tipAmount} Total={total} setBill={setBill} setNumber={setNumber} setTipAmount={setTipAmount} setTotal={setTotal} setSelected={setSelected}/>
         </div>
         
       </div>

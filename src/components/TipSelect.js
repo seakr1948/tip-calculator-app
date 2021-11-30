@@ -2,8 +2,8 @@ import { useState } from 'react'
 import React from 'react'
 import '../css/tip-select.css'
 
-const TipSelect = ({Bill, calculate, Number}) => {
-    const [selected, setSelected] = useState(null)
+const TipSelect = ({Bill, calculate, Number, selected, setSelected}) => {
+    
     const [custom, setCustom] = useState("")
     const tipselection = [0.05, 0.10, 0.15, 0.25, 0.5]
 
@@ -15,7 +15,7 @@ const TipSelect = ({Bill, calculate, Number}) => {
                 
                 {tipselection.map((tip, index) => {
                     
-                    return <button key={index} id= {index == selected ? 'selected' : ''}
+                    return <button key={index} id= {index === selected ? 'selected' : ''}
                     onClick={() => {
                         setSelected(index)
                         calculate(Bill, tip, Number)
