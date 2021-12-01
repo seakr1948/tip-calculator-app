@@ -24,7 +24,7 @@ const InputPeople = ({Label, icon, setNumber, Number}) => {
                 <img src={icon} alt={Label} />
                 <input 
                     className="input" 
-                    type="text" inputMode="decimal"
+                    type="number" inputMode="numeric"
                     min="0" 
                     placeholder="0" 
                     onChange={(event) => {setNumber(event.target.value)}} 
