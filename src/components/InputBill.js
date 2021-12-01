@@ -7,7 +7,15 @@ const InputComponent = ({Label, icon, Bill, setBill}) => {
         <div className="input-container">
             <label htmlFor={Label}>{Label}</label>
             <div className="flex input-box">
-                <img src={icon} alt={Label} /><input className="input" type="text" pattern="\d*" placeholder="0" min="0" value={Bill} onChange={(event) => setBill(event.target.value)} id={Label} />
+                <img src={icon} alt={Label} />
+                <input  className="input" 
+                        type="text" 
+                        inputMode="decimal" 
+                        placeholder="0" 
+                        min="0" 
+                        value={Bill} 
+                        onChange={(event) => setBill(event.target.value)} id={Label} 
+                />
             </div>
             
         </div>
