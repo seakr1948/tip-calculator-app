@@ -17,6 +17,12 @@
                 color 0.2s ease;
 }
 
+@media (min-width: 1080px) {
+    .tip-select button{
+        width: 30%;
+    }
+}
+
 .tip-select button:hover:not(:last-child){
     background-color: var(--selected);
     color: var(--Very-dark-cyan);

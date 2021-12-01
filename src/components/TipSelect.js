@@ -26,13 +26,16 @@ const TipSelect = ({Bill, calculate, Number, selected, setSelected}) => {
                 <button className="btn">
                     <input type="number" name="" id="custom-tip" placeholder="Custom" min="0"
                     value={custom}
+                    onBlur={() => setCustom("")}
                     onChange={(event) => setCustom(event.target.value)}
                     onClick={() => {setSelected(null)}} 
                     onKeyDown={(event) => {
                         if (event.key === "Enter") {
+                            if (custom != ""){
                             const custom_tip = parseFloat(custom)/100
                             console.log(custom_tip)
                             calculate(Bill, custom_tip, Number)
+                            }
                         }
                     }}
                     />

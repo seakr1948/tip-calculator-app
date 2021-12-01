@@ -25,6 +25,7 @@ function App() {
     bill = parseFloat(bill)
     number = parseFloat(number)
     
+    if (number > 0){
     let tip = bill * tip_percent;
     let total = bill + tip;
 
@@ -32,6 +33,7 @@ function App() {
     
     setTipAmount((tip / number))
     setTotal((total / number))
+    }
   }
 
   return (
@@ -41,12 +43,11 @@ function App() {
         <img src={Logo} alt="Logo" />
         
         <div className="tip-body">
-          <InputBill Label="Bill" icon={Dollar} Bill={bill} setBill={setBill}/>
-          
-          <TipSelect Bill={bill} calculate={calculate}  Number={number} selected={selected} setSelected={setSelected}/>
-
-          <InputPeople Label="Number of People" icon={Person} setNumber={setNumber} Number={number}/>
-
+          <div className="tip-section flex">
+            <InputBill Label="Bill" icon={Dollar} Bill={bill} setBill={setBill}/>
+            <TipSelect Bill={bill} calculate={calculate}  Number={number} selected={selected} setSelected={setSelected}/>
+            <InputPeople Label="Number of People" icon={Person} setNumber={setNumber} Number={number}/>
+          </div>
           <TipAmount Amount={tipAmount} Total={total} Bill={bill} Number={number} setBill={setBill} setNumber={setNumber} setTipAmount={setTipAmount} setTotal={setTotal} setSelected={setSelected}/>
         </div>
         

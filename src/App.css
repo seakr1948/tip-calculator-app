@@ -11,7 +11,7 @@ input, label{
 }
 
 .tip-container{
-  
+  display: flex;
   height: 100%;
   flex-flow: column nowrap;
   justify-content: center;
@@ -19,6 +19,8 @@ input, label{
   width: 100%;
   max-width: 400px;
 }
+
+
 
 .tip-container img{
   margin: 2em 0;
@@ -36,6 +38,8 @@ input, label{
 
 /* Tip Body */
 .tip-body{
+  display: flex;
+  flex-flow: column nowrap;
   height: 100%;
   background-color: var(--White);
   border-radius: 1em 1em 0em 0em;
@@ -43,12 +47,48 @@ input, label{
 }
 
 .tip-body > *{
-  
   margin: 1.5em 0;
+}
+
+.tip-section {
+  flex-direction: column;
 }
 
 /* Bill entry */
 .bill-entry{
   
   width: 100%;
+}
+
+@media (min-width: 1080px) {
+
+  .tip-section{
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .tip-container{
+    
+    max-width:900px;
+    height: auto;
+  }
+
+  .tip-container > img{
+    width: 120px;
+    margin: 3em;
+  }
+
+  .tip-body{
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+    height: 400px;
+    width: 100%;
+  }
+
+  .tip-body > *{
+    margin: 0;
+  }
 }
