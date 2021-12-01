@@ -31,7 +31,7 @@ const TipSelect = ({Bill, calculate, Number, selected, setSelected}) => {
                     onClick={() => {setSelected(null)}} 
                     onKeyDown={(event) => {
                         if (event.key === "Enter") {
-                            if (custom != ""){
+                            if (custom !== ""){
                             const custom_tip = parseFloat(custom)/100
                             console.log(custom_tip)
                             calculate(Bill, custom_tip, Number)
