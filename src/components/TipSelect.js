@@ -24,7 +24,7 @@ const TipSelect = ({Bill, calculate, Number, selected, setSelected}) => {
                         </button>
                 })}
                 <button className="btn">
-                    <input type="number" name="" id="custom-tip" placeholder="Custom" min="0"
+                    <input type="number" inputMode="numeric" id="custom-tip" placeholder="Custom" min="0"
                     value={custom}
                     onBlur={() => setCustom("")}
                     onChange={(event) => setCustom(event.target.value)}
