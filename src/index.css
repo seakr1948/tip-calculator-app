@@ -30,6 +30,7 @@ body {
   padding: 0;
   font-family: 'Space Mono', monospace;
   background-color: var(--Light-cyan-1);
+  height: 100%;
 }
 
 h1,
